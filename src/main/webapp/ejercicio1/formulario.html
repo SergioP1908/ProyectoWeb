@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro de Usuarios</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    label {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="date"]:focus {
+      border-color: #5cb85c;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #5cb85c;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #4cae4c;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group input {
+      font-size: 16px;
+      height: 40px;
+    }
+    
+    /* Añadir un poco de separación entre elementos */
+    .spacer {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Registro de Usuarios</h1>
+
+    <form action="../Clientes.html">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="dedwed" placeholder="Escribe tu nombre" maxlength="30" required>
+      </div>
+
+      <div class="form-group">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" value="esefsef" placeholder="Escribe tus apellidos" maxlength="50" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" value="54063785R" placeholder="Escribe el DNI" maxlength="9" pattern="^\d{8}[A-Za-z]$" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fechadenacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechadenacimiento" name="fechadenacimiento" required>
+      </div>
+
+      <input type="submit" value="Registrar Cliente">
+    </form>
+  </div>
+
+</body>
+</html>
