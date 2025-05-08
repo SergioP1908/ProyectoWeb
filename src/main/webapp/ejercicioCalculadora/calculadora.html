@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CALCULADORA</title>
+</head>
+<body>
+
+	<h1>CALCULADORA</h1>
+	
+	<div class="form-group"> 
+      	<input type="number" id="numero" name="numero" value="" placeholder="Ingrese un numero" maxlength="30" required>
+    </div>
+     
+     <br>
+     
+     <div class="form-group"> 
+        <input type="number" id="resultado" name="resultado" value="" placeholder="" maxlength="30" readonly="readonly">
+     </div>
+     <br><br>
+     
+    <button onclick="realizarOperacion('+')">+</button>
+    <button onclick="realizarOperacion('-')">-</button>
+    <button onclick="realizarOperacion('*')">*</button>
+    <button onclick="realizarOperacion('/')">/</button>
+    <button onclick="calcularResultado()">=</button>
+    
+    
+    <script type="text/javascript">
+    
+	let operacion ="";
+	let num1="";
+	let num2="";
+	
+    function agregarNumero(numeroIngresado) {
+        let numero = document.getElementById('numero');
+        numero.value += numeroIngresado;
+      }
+	
+    function realizarOperacion(operador) {
+        num1 = document.getElementById('numero').value;
+        operacion = operador;
+        document.getElementById('numero').value = ''; 
+      }
+    
+    function calcularResultado() {
+        num2 = document.getElementById('numero').value;
+        let resultado;
+
+
+        if (operacion == '+') {
+          resultado = parseFloat(num1) + parseFloat(num2);
+        } else if (operacion == '-') {
+          resultado = parseFloat(num1) - parseFloat(num2);
+        } else if (operacion == '*') {
+          resultado = parseFloat(num1) * parseFloat(num2);
+        } else if (operacion == '/') {
+          resultado = parseFloat(num1) / parseFloat(num2);
+        }
+
+
+        document.getElementById('resultado').value = resultado;
+      }
+    
+    </script>
+	
+</body>
+</html>
